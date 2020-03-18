@@ -50,7 +50,7 @@ function initListeners() {
             allowedCells.then((items) => {
                 if (items.length) {
                     items.forEach(element => {
-                        $('#' + element).css('cursor', 'default');
+                        $('#' + element).css('cursor', 'pointer');
                     });
                 }
             });
@@ -74,7 +74,7 @@ function initListeners() {
                 }
             });
 
-            $('.cell').css('cursor', 'default');
+            $('.cell').css('cursor', 'pointer');
             event.stopPropagation();
         }
     });
@@ -82,13 +82,13 @@ function initListeners() {
     //some validations if the user move out from the board
     $('body').mouseup(function (event) {
         allowedCells = null;
-        $('.cell').css('cursor', 'default');
+        $('.cell').css('cursor', 'pointer');
         event.stopPropagation();
     })
 
     $(window).mouseup(function (event) {
         allowedCells = null;
-        $('.cell').css('cursor', 'default');
+        $('.cell').css('cursor', 'pointer');
         event.stopPropagation();
     });
 }
